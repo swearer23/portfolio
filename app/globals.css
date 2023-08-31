@@ -27,8 +27,8 @@ a {
     
 }
 a:hover {
-        color:#2223;
-        text-shadow:0 0 100px #333;
+        color:#000;
+        text-shadow:0 0 30px #3335;
     }
 
 canvas {
