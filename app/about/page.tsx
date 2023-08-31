@@ -21,7 +21,7 @@ export default async function Home() {
         <b>Programming Languages</b>
         <div className='mt-6 flex flex-wrap mb-6'>
           {
-            langStats.map(({key, percentage, icon}: {key: string, percentage: number, icon: any}) => {
+            langStats.map(({key, percentage, icon}: LangStats) => {
               let i
               if (!icon) {
                 i = <BiCodeAlt className='inline-block mr-2' size={24} />

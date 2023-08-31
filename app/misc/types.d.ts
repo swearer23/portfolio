@@ -4,7 +4,7 @@ export type LangStats = {
   key: string,
   value: number,
   percentage: string,
-  icon: IconType|undefined,
+  icon?: IconType,
 }
 
 type Repo = {

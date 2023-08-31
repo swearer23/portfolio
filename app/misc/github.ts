@@ -1,5 +1,5 @@
 import { Octokit } from "octokit";
-import { langStats } from "./types.d";
+import { LangStats } from "./types";
 
 const octokit = new Octokit({
   auth: process.env.GH_TOKEN,
@@ -46,7 +46,7 @@ const getRepoLanguages = async (repo: string) => {
   return languageStats.data;
 }
 
-export async function getGithubLangStats (): Promise<langStats> {
+export async function getGithubLangStats (): Promise<LangStats[]> {
   const repos = await octokit.request(`GET /user/repos`, {
     sort: 'updated',
     direction: 'desc',
