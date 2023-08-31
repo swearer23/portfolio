@@ -3,12 +3,11 @@ import { BiCodeAlt } from 'react-icons/bi'
 import { langIconMap } from '../misc/const'
 import { LangStats } from '../misc/types'
 import LibsAndFramworks from '../components/frameworks'
+import { getGithubLangStats } from '../misc/github'
 
 export default async function Home() {
 
-  const langStats = (await (await fetch(`${process.env.NEXT_BASE_URL}/api/github/language`, {
-    cache: process.env.FETCH_CACHE as RequestCache
-  })).json()).data
+  const langStats = await getGithubLangStats()
 
   langStats.forEach((element: LangStats) => {
     const key = element['key']

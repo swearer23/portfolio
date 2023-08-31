@@ -1,6 +1,5 @@
-import { LangStats } from "@/app/misc/types";
-import { NextResponse } from "next/server";
 import { Octokit } from "octokit";
+import { langStats } from "./types.d";
 
 const octokit = new Octokit({
   auth: process.env.GH_TOKEN,
@@ -47,7 +46,7 @@ const getRepoLanguages = async (repo: string) => {
   return languageStats.data;
 }
 
-export async function GET() {
+export async function getGithubLangStats (): Promise<langStats> {
   const repos = await octokit.request(`GET /user/repos`, {
     sort: 'updated',
     direction: 'desc',
@@ -71,6 +70,21 @@ export async function GET() {
     }
   }))).filter(repo => repo !== null)
   const langStats = getLangStats(languages)
-  console.log(langStats)
-  return NextResponse.json({ data: langStats});
+  return langStats
+}
+
+export async function getGithubRepos () {
+  const repos = await octokit.request(`GET /user/repos`, {
+    sort: 'updated',
+    direction: 'desc',
+    type: 'owner',
+    per_page: 100,
+    headers: {
+      'X-GitHub-Api-Version': '2022-11-28'
+    }
+  })
+  const nonForkedRepos = await Promise.all(repos.data.filter(repo => {
+    return !repo.fork
+  }))
+  return nonForkedRepos
 }

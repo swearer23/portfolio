@@ -1,15 +1,11 @@
 import { BiLogoGithub } from 'react-icons/bi'
+import { getGithubRepos } from '../misc/github'
+import { Repo } from '../misc/types'
 
-type Repo = {
-  name: string,
-  url: string,
-  description: string,
-  language: string,
-}
 
 export default async function Home() {
 
-  const repos = (await (await fetch(`${process.env.NEXT_BASE_URL}/api/github/repos`)).json()).data.map((repo: any) => {
+  const repos = (await getGithubRepos()).map((repo: any) => {
     return {
       name: repo.name,
       url: repo.html_url,

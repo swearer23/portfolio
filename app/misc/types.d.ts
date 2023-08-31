@@ -7,3 +7,9 @@ export type LangStats = {
   icon: IconType|undefined,
 }
 
+type Repo = {
+  name: string,
+  url: string,
+  description: string,
+  language: string,
+}
