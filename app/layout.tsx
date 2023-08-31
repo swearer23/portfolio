@@ -13,13 +13,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""></link>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet"></link>
-        <script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
       </head>
-      <body>
-        <div className="flex justify-center">
+      <body className="flex justify-center">
+        <div className="h-full" style={{width: '688px'}}>
           <Menu />
-          <div className="artboard artboard-horizontal phone-4 mt-10">{children}</div>
+          <div className="mt-8 mb-20">{children}</div>
         </div>
+        <script src="/canvas.js"></script>
       </body>
     </html>
   )

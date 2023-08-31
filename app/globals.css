@@ -17,3 +17,20 @@ body {
 }
 
 .stack {font-size: 0.8rem;}
+
+/* @import url('https://fonts.googleapis.com/css?family=Lora&display=swap'); */
+
+a {
+    color:#222a;
+    text-decoration:#2224 wavy underline;
+    transition:all 0.3s;
+    &:hover {
+        color:#2223;
+        text-shadow:0 0 100px #333;
+    }
+}
+
+canvas {
+    position:fixed;
+    z-index:-1;
+}

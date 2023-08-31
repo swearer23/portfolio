@@ -33,7 +33,7 @@ export default async function Home() {
                 });
               }
               return (
-                <div className="mr-5 mb-3 p-2 px-5 bg-gray-200 w-fit rounded-lg hover:shadow-emerald-100 hover:shadow-inner flex content-baseline" key={key}>
+                <div className="mr-5 mb-3 p-2 px-5 bg-gray-200 w-fit rounded-lg hover:shadow-emerald-200 hover:shadow-inner flex content-baseline transition ease-in-out duration-300" key={key}>
                   {i}
                   <span className='align-text-top'>{key}</span>
                   <div className="badge ml-2 mt-1">{percentage}%</div>
