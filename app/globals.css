@@ -22,13 +22,13 @@ body {
 
 a {
     color:#222a;
-    text-decoration:#2224 wavy underline;
+    /* text-decoration:#2224 wavy underline; */
     transition:all 0.3s;
     
 }
 a:hover {
         color:#000;
-        text-shadow:0 0 30px #3335;
+        text-shadow:0 0 30px #3338;
     }
 
 canvas {

@@ -20,7 +20,7 @@ export default async function Home() {
         <h1 className="text-slate-600"><a className="underline decoration-emerald-200">Projects</a></h1>
         <b>Demos</b>
         <h2>
-          <a href="https://ttm.zspxy.xyz" target="_blank" className="hover:text-emerald-200">
+          <a href="https://ttm.zspxy.xyz" target="_blank" className="decoration-emerald-200">
             # Twitter Thread to Markdown
           </a>
         </h2>
@@ -31,7 +31,7 @@ export default async function Home() {
           </a>
         </p>
         <h2>
-          <a href="https://spimask.zspxy.xyz" target="_blank" className="hover:text-emerald-200">
+          <a href="https://spimask.zspxy.xyz" target="_blank" className="decoration-emerald-200">
             # Sensitive Information Mask SDK
           </a>
         </h2>
