@@ -1,3 +1,4 @@
+import { LangStats } from "@/app/misc/types";
 import { NextResponse } from "next/server";
 import { Octokit } from "octokit";
 
@@ -21,7 +22,16 @@ const getLangStats = (repos: ({
       }
     })
   })
-  return Object.fromEntries(langStats.entries())
+  const sum = Array.from(langStats).reduce((acc, [key, value]) => {
+    return acc + value
+  }, 0)
+  const ret = Array.from(langStats)
+  .map(([key, value]) => {
+    return { key: key, value: value, percentage: (value * 100 / sum).toFixed(2) };
+  }).sort((a, b) => {
+    return b.value - a.value;
+  });
+  return ret
 }
 
 const getRepoLanguages = async (repo: string) => {
@@ -61,5 +71,6 @@ export async function GET() {
     }
   }))).filter(repo => repo !== null)
   const langStats = getLangStats(languages)
+  console.log(langStats)
   return NextResponse.json({ data: langStats});
 }
