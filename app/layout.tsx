@@ -1,6 +1,7 @@
 import React from "react"
 import "./globals.css"
 import Menu from "./components/menu"
+import { Analytics } from '@vercel/analytics/react';
 
 export default function RootLayout({
   children,
@@ -19,6 +20,7 @@ export default function RootLayout({
           <Menu />
           <div className="mt-8 mb-20 ml-28">{children}</div>
         </div>
+        <Analytics />
         <script src="/canvas.js"></script>
       </body>
     </html>
