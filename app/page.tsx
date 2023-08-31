@@ -1,4 +1,3 @@
-'use client'
 import {AiFillGithub, AiOutlineTwitter} from 'react-icons/ai'
 
 export default function Home() {
