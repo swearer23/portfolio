@@ -20,8 +20,8 @@ export default function RootLayout({
           <Menu />
           <div className="mt-8 mb-20 ml-28">{children}</div>
         </div>
-        <Analytics />
         <script src="/canvas.js"></script>
+        <Analytics />
       </body>
     </html>
   )
