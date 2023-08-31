@@ -17,7 +17,7 @@ export default function RootLayout({
       <body className="flex justify-center">
         <div className="h-full" style={{width: '688px'}}>
           <Menu />
-          <div className="mt-8 mb-20">{children}</div>
+          <div className="mt-8 mb-20 ml-28">{children}</div>
         </div>
         <script src="/canvas.js"></script>
       </body>

@@ -19,7 +19,7 @@ export default function Menu() {
 
   return (
     <>
-      <div className="w-56 mt-10 fixed left-[max(0px,calc(50%-36rem))]">
+      <div className="w-56 mt-10 fixed left-[max(0px,calc(50%-28rem))]">
         <div className="avatar place-self-center flex justify-center mb-10">
           <div className="w-36 rounded-full ring ring-offset-emerald-200 ring-offset-2">
             <img src="/avatar.jpg" />
