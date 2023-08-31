@@ -36,7 +36,7 @@ export default function Menu() {
           </div>
           <li><Link href='/' className={classname('/')}><span><AiOutlineHome size={18} style={{ display: "inline-block" }} /></span>Home</Link></li>
           <li><Link href='/about' className={classname('/about')}><span><AiOutlineUser size={18} style={{ display: "inline-block" }} /></span>About</Link></li>
-          <li><a><span><AiOutlineRocket size={18} style={{ display: "inline-block" }} /></span>Project</a></li>
+          <li><Link href='/project'><span><AiOutlineRocket size={18} style={{ display: "inline-block" }} /></span>Project</Link></li>
           <li><a><span><AiOutlineProfile size={18} style={{ display: "inline-block" }} /></span>Resume</a></li>
           <li><a><span><AiOutlinePhone size={18} style={{ display: "inline-block" }} /></span>Contact</a></li>
         </ul>

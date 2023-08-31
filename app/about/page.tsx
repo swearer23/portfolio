@@ -2,6 +2,7 @@ import React from 'react'
 import { BiCodeAlt } from 'react-icons/bi'
 import { langIconMap } from '../misc/const'
 import { LangStats } from '../misc/types'
+import LibsAndFramworks from '../components/frameworks'
 
 export default async function Home() {
 
@@ -19,7 +20,7 @@ export default async function Home() {
       <article className="prose pl-10 mt-32">
         <h1 className="text-slate-600"><a className="underline decoration-emerald-200">Skillset</a></h1>
         <b>Programming Languages</b>
-        <div className='mt-6 flex flex-wrap'>
+        <div className='mt-6 flex flex-wrap mb-6'>
           {
             langStats.map(({key, percentage, icon}: {key: string, percentage: number, icon: any}) => {
               let i
@@ -41,6 +42,7 @@ export default async function Home() {
             })
           }
         </div>
+        <LibsAndFramworks />
       </article>
     </> 
   )
