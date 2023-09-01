@@ -1,6 +1,6 @@
 ![Vercel](https://vercelbadge.vercel.app/api/swearer23/portfolio)
 
-```markdown
+
 # Personal Website Portfolio
 
 This is my Personal Website Portfolio built using Next.js. This project showcases my personal projects and skills.
@@ -57,4 +57,4 @@ This is my Personal Website Portfolio built using Next.js. This project showcase
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-```
+
