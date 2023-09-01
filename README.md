@@ -1,4 +1,4 @@
-![Vercel](https://vercelbadge.vercel.app/api/[owner]/[repo])
+![Vercel](https://vercelbadge.vercel.app/api/swearer23/portfolio)
 
 ```markdown
 # Personal Website Portfolio
