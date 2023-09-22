@@ -18,6 +18,18 @@ export default async function Home() {
     <>
       <article className="prose pl-10 mt-32">
         <h1 className="text-slate-600"><a className="underline decoration-emerald-200">Projects</a></h1>
+        <b>Web Apps</b>
+        <h2>
+          <a href="https://dow.zspxy.xyz" target="_blank" className="decoration-emerald-200">
+            # CrossFit WOD generator
+          </a>
+        </h2>
+        <p>
+          A CrossFit training plan (WOD) generator powered by GPT LLM and LangchainJS and Vercel <br />
+          <a href="https://github.com/swearer23/wodgen-js" target="_blank">
+            <BiLogoGithub className='inline-block mr-2' size={24} /> Github Repo
+          </a>
+        </p>
         <b>Demos</b>
         <h2>
           <a href="https://ttm.zspxy.xyz" target="_blank" className="decoration-emerald-200">
